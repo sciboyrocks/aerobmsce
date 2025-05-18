@@ -1,0 +1,52 @@
+/* Enhanced high-density screen support */
+@media (min-width: 1920px) {
+  .team-card-holo {
+    perspective: 1200px;
+  }
+  
+  .expertise-ring {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .tech-indicator {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .corner-top-right,
+  .corner-bottom-left {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+  .circuit-pattern {
+    opacity: 0.1;
+  }
+  
+  .team-card-holo:hover .circuit-pattern {
+    opacity: 0.2;
+  }
+  
+  .tech-indicator {
+    background-color: rgba(0, 119, 182, 0.9);
+  }
+}
+
+/* Optimization for reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .team-card-holo::before,
+  .radar-sweep::before,
+  .profile-image-tech::before,
+  .hexagon-border-animated::before {
+    animation: none;
+  }
+  
+  .tech-indicator {
+    animation: none;
+    opacity: 0.7;
+  }
+}

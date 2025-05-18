@@ -1,0 +1,131 @@
+/* filepath: /Users/samrudhraikote/untitled folder/src/assets/css/dayMode.css */
+/* Day mode styling for AEROBMSCE website */
+
+/* Main day mode styles */
+body.day-mode-body {
+  background-color: #f0f8ff !important; /* Light blue sky color */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(240, 248, 255, 0.3) 0%, rgba(240, 248, 255, 0.7) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23cce6ff' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3C/svg%3E") !important;
+  color: #1a2639 !important; /* Dark blue text for contrast */
+  transition: all 0.5s ease;
+}
+
+/* Component styling for day mode */
+.day-mode {
+  color: #1a2639;
+}
+
+.day-mode h1, .day-mode h2, .day-mode h3, .day-mode h4, .day-mode h5, .day-mode h6 {
+  color: #1a2639;
+}
+
+.day-mode .glass-panel {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 119, 182, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 119, 182, 0.1);
+}
+
+.day-mode .grid-overlay {
+  background-image: linear-gradient(rgba(0, 119, 182, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 119, 182, 0.03) 1px, transparent 1px);
+  opacity: 0.5;
+}
+
+.day-mode .cockpit-label {
+  color: rgba(26, 38, 57, 0.7);
+}
+
+.day-mode .cockpit-value {
+  color: #0077B6;
+}
+
+.day-mode .nav-item {
+  color: #1a2639;
+}
+
+/* Navigation in day mode */
+.day-mode .bg-jet-black\/80 {
+  background-color: rgba(240, 248, 255, 0.8) !important;
+}
+
+.day-mode .text-white {
+  color: #1a2639 !important;
+}
+
+/* Day mode section styling */
+.day-mode section {
+  border-top: 1px solid rgba(0, 119, 182, 0.1);
+}
+
+.day-mode .section-transition.active::after {
+  background-color: #0077B6;
+}
+
+/* Button styling for day mode */
+.day-mode .button-primary {
+  background: rgba(0, 119, 182, 0.1);
+  color: #0077B6;
+  border-color: #0077B6;
+}
+
+.day-mode .button-secondary {
+  border-color: #0077B6;
+  color: #0077B6;
+}
+
+/* Mobile menu styling for day mode */
+.day-mode .bg-jet-black\/90 {
+  background-color: rgba(240, 248, 255, 0.95) !important;
+}
+
+.day-mode .mobile-menu-button span {
+  background-color: #1a2639 !important;
+}
+
+/* Toggle button specific styling */
+.day-toggle {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 184, 148, 0.7) !important;
+  box-shadow: 0 0 15px rgba(0, 184, 148, 0.3) !important;
+}
+
+.night-toggle:hover {
+  background: rgba(10, 10, 14, 0.9) !important;
+  border: 1px solid rgba(0, 184, 148, 0.7) !important;
+  box-shadow: 0 0 25px rgba(0, 184, 148, 0.6) !important;
+}
+
+.day-mode .button-highlight:hover {
+  box-shadow: 0 0 15px rgba(0, 184, 148, 0.3) !important;
+}
+
+/* Home page specific styles */
+.day-mode .text-4xl.text-white,
+.day-mode .text-5xl.text-white,
+.day-mode .text-6xl.text-white,
+.day-mode .text-7xl.text-white {
+  color: #1a2639 !important;
+}
+
+/* Text and paragraph styles */
+.day-mode p.text-titanium-gray {
+  color: #575f6d !important;
+}
+
+/* Additional text shadows for legibility */
+.day-mode .text-deep-sky-blue {
+  text-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
+}
+
+/* Scroll down indicator */
+.day-mode .text-titanium-gray {
+  color: #575f6d !important;
+}
+
+/* Canvas and animation adjustments */
+.day-mode canvas {
+  opacity: 0.7;
+}

@@ -1,0 +1,326 @@
+/* filepath: /Users/samrudhraikote/untitled folder/src/assets/css/enhancedTeamCards.css */
+/* Enhanced styling for team member cards */
+
+/* Holographic effect for cards */
+.team-card-holo {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.team-card-holo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg, 
+    rgba(0, 119, 182, 0.05) 0%, 
+    rgba(0, 119, 182, 0.2) 25%, 
+    rgba(0, 119, 182, 0.05) 50%,
+    rgba(253, 112, 20, 0.1) 75%,
+    rgba(0, 119, 182, 0.05) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-shine 8s ease infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.team-card-holo:hover::before {
+  opacity: 1;
+}
+
+@keyframes holographic-shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glowing border for team cards */
+.team-card-border {
+  position: relative;
+}
+
+.team-card-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    to right,
+    rgba(0, 119, 182, 0.1),
+    rgba(0, 119, 182, 0.6),
+    rgba(253, 112, 20, 0.3),
+    rgba(0, 119, 182, 0.1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Glowing tech effect for profile images */
+.profile-image-tech {
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-image-tech::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 119, 182, 0), rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+.profile-image-tech:hover::before {
+  opacity: 0.5;
+  animation: tech-scan 2s linear infinite;
+}
+
+@keyframes tech-scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Circuit pattern for background */
+.circuit-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%230077B6' fill-opacity='0.1' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.team-card-holo:hover .circuit-pattern {
+  opacity: 0.15;
+}
+
+/* Tech indicators and blinking elements */
+.tech-indicator {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(0, 119, 182, 0.7);
+  animation: blink 2s infinite alternate;
+}
+
+.tech-indicator.top-right {
+  top: 10px;
+  right: 10px;
+  animation-delay: 0.5s;
+}
+
+.tech-indicator.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  animation-delay: 1s;
+}
+
+@keyframes blink {
+  0%, 80% { opacity: 1; }
+  90% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* Angular corner design */
+.corner-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+}
+
+.corner-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+/* Progress ring effect for expertise level */
+.expertise-ring {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(0, 119, 182, 0.8) var(--expertise-percentage, 75%), 
+    rgba(122, 125, 127, 0.2) var(--expertise-percentage, 75%)
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #fff calc(100% - 4px));
+}
+
+/* Role badge styling */
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgba(0, 119, 182, 0.2), rgba(0, 119, 182, 0.1));
+  border: 1px solid rgba(0, 119, 182, 0.3);
+  color: rgba(0, 119, 182, 1);
+}
+
+/* Enhanced image reflection effect */
+.image-reflection {
+  position: relative;
+}
+
+.image-reflection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.image-reflection:hover::after {
+  opacity: 0.5;
+}
+
+/* Full card hover effects */
+.team-card-holo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card-holo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 119, 182, 0.2);
+}
+
+/* Tech radar animation */
+.radar-sweep {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.radar-sweep::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 119, 182, 0.05) 50%,
+    transparent 100%
+  );
+  transform-origin: center;
+  animation: radar-rotate 4s linear infinite;
+}
+
+.team-card-holo:hover .radar-sweep {
+  opacity: 1;
+}
+
+@keyframes radar-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced hexagon border with animation */
+.hexagon-border-animated {
+  position: relative;
+}
+
+.hexagon-border-animated::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    rgba(0, 119, 182, 0.1) 0deg,
+    rgba(0, 119, 182, 0.5) 60deg,
+    rgba(0, 119, 182, 0.8) 120deg,
+    rgba(0, 119, 182, 0.5) 180deg,
+    rgba(0, 119, 182, 0.1) 240deg,
+    rgba(0, 119, 182, 0.5) 300deg,
+    rgba(0, 119, 182, 0.1) 360deg
+  );
+  border-radius: inherit;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rotate-border 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card-holo:hover .hexagon-border-animated::before {
+  opacity: 1;
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments for enhanced team cards */
+@media (max-width: 768px) {
+  .team-card-holo::before {
+    opacity: 0.3; /* Make holographic effect slightly visible by default on mobile */
+  }
+  
+  .expertise-ring {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .role-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .tech-indicator {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .corner-top-right,
+  .corner-bottom-left {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,81 @@
+/* CSS for smooth transitions between light and dark modes */
+
+/* Global transition properties */
+.transition-element {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-duration: 0.4s;
+}
+
+/* Special mode transition animation */
+@keyframes fadeMode {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.08;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Mode transition overlay */
+.mode-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  animation: fadeMode 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.night-to-day {
+  background: radial-gradient(circle at center, rgba(240, 248, 255, 0.5) 0%, rgba(240, 248, 255, 0.2) 40%, transparent 80%);
+  backdrop-filter: blur(2px);
+}
+
+.day-to-night {
+  background: radial-gradient(circle at center, rgba(18, 18, 18, 0.5) 0%, rgba(18, 18, 18, 0.2) 40%, transparent 80%);
+  backdrop-filter: blur(2px);
+}
+
+/* Slow transition elements */
+.slow-transition {
+  transition-duration: 0.7s;
+}
+
+/* Enhanced transitions for specific elements */
+.text-transition {
+  transition: color 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+              text-shadow 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.bg-transition {
+  transition: background-color 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+              background-image 0.45s cubic-bezier(0.25, 0.1, 0.25, 1),
+              box-shadow 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.border-transition {
+  transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+              box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Add a subtle flash effect for mode transitions */
+@keyframes modeFlash {
+  0% {
+    filter: brightness(1);
+  }
+  40% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Apply this class during mode transitions */
+.mode-flash {
+  animation: modeFlash 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}

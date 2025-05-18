@@ -1,0 +1,6 @@
+.bg-grid-pattern {
+  background-image: none; /* Remove the base grid to avoid duplication */
+  background-size: 40px 40px;
+  background-position: center center;
+  transition: background-image 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}

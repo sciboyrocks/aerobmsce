@@ -1,0 +1,98 @@
+/* filepath: /Users/samrudhraikote/untitled folder/src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --jet-black: #121212;
+  --titanium-gray: #7A7D7F;
+  --deep-sky-blue: #0077B6;
+  --control-panel-green: #00B894;
+  --afterburner-orange: #FD7014;
+  --radar-green: #4ADE80;
+}
+
+@layer base {
+  html {
+    font-family: 'Rajdhani', sans-serif;
+    background-color: var(--jet-black);
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+@layer components {
+  .aerospace-panel {
+    @apply bg-opacity-80 backdrop-blur-sm border border-titanium-gray/30 rounded-md shadow-lg;
+  }
+  
+  .nav-item {
+    @apply relative px-4 py-2 text-base uppercase tracking-wider cursor-pointer transition-all duration-300 text-white hover:text-afterburner-orange;
+  }
+  
+  .button-primary {
+    @apply px-6 py-2 text-white uppercase tracking-wider font-medium border rounded hover:bg-deep-sky-blue transition-all duration-300 backdrop-blur-sm shadow-lg;
+  }
+  
+  .button-secondary {
+    @apply px-6 py-2 bg-transparent text-white uppercase tracking-wider font-medium border border-titanium-gray/50 rounded hover:border-afterburner-orange hover:text-afterburner-orange transition-all duration-300;
+  }
+  
+  .reticle-cursor {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%230077B6" stroke-width="1.5"><circle cx="12" cy="12" r="10" stroke-opacity="0.6"/><line x1="12" y1="2" x2="12" y2="6" /><line x1="12" y1="18" x2="12" y2="22" /><line x1="2" y1="12" x2="6" y2="12" /><line x1="18" y1="12" x2="22" y2="12" /></svg>') 12 12, auto;
+  }
+}
+
+/* Custom animations */
+.radar-line {
+  transform-origin: bottom center;
+  animation: radar-sweep 4s linear infinite;
+}
+
+.thruster-glow {
+  animation: thruster 1.5s ease-in-out infinite;
+}
+
+.blink-soft {
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes thruster {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
