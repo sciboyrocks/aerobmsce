@@ -28,8 +28,8 @@ const Footer = () => {
             <p className="text-titanium-gray text-xs xs:text-sm text-center sm:text-left mb-3 xs:mb-4 max-w-xs">
               Exploring the frontiers of aerospace engineering through innovation, education, and hands-on projects.
             </p>
-            <div className="flex space-x-2 xs:space-x-3">
-              {['twitter', 'instagram', 'linkedin', 'github'].map((social) => (
+            <div className="flex justify-center space-x-2 xs:space-x-3">
+              {['instagram', 'linkedin', 'github', 'twitter'].map((social) => (
                 <motion.a
                   key={social}
                   href="#"
@@ -39,7 +39,7 @@ const Footer = () => {
                   aria-label={`Visit our ${social}`}
                 >
                   <span className="sr-only">{social}</span>
-                  <i className={`fa fa-${social}`}></i>
+                  <i className={`fa-brands fa-${social}`}></i>
                 </motion.a>
               ))}
             </div>

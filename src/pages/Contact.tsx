@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -324,10 +325,10 @@ const Contact = () => {
               </div>
               
               {/* Social Media Links */}
-              <div className="mb-8">
+              <div className="mb-8 text-center">
                 <h4 className="text-sm text-titanium-gray mb-4 uppercase font-orbitron tracking-wider">Connect with Us</h4>
-                <div className="flex space-x-4">
-                  {['instagram', 'twitter', 'linkedin', 'youtube', 'github'].map((social) => (
+                <div className="flex justify-center space-x-4">
+                  {['instagram', 'linkedin', 'github', 'twitter', 'youtube'].map((social) => (
                     <motion.a
                       key={social}
                       href="#"
@@ -336,28 +337,26 @@ const Contact = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <span className="sr-only">{social}</span>
-                      <i className={`fa fa-${social}`}></i>
+                      <i className={`fa-brands fa-${social}`}></i>
                     </motion.a>
                   ))}
                 </div>
               </div>
               
               {/* Map or Location Visual */}
-              <div className="relative rounded-md overflow-hidden h-48 border border-titanium-gray/30">
-                <div className="absolute inset-0 bg-jet-black/50 backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="mb-3 text-titanium-gray">
-                      <svg className="w-10 h-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                      </svg>
-                    </div>
-                    <button className="button-secondary text-sm py-1.5">
-                      View on Map
-                    </button>
-                  </div>
-                </div>
-                <div className="absolute inset-0 blueprint-grid opacity-20"></div>
-              </div>
+              
+      <div className="relative rounded-md overflow-hidden h-48 border border-titanium-gray/30">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5301533205468!2d77.56427807353691!3d12.941055915822866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae158b11e34d2f%3A0x5f4adbdbab8bd80f!2sBMS%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1684424248540!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="BMSCE Location"
+              ></iframe>
+      </div>
             </motion.div>
           </div>
           
