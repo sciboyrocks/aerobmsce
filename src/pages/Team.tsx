@@ -20,16 +20,16 @@ const Team = () => {
   const [activeDepartment, setActiveDepartment] = useState<string>('all');
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
   
-  // Sample team members data
+  // Team members data with placeholders
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      name: "Dr. Arun Sharma",
+      name: "Faculty Advisor",
       role: "Faculty Advisor",
       department: "Faculty",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
-      bio: "Dr. Sharma has over 15 years of experience in aerospace engineering, specializing in propulsion systems. He provides guidance and mentorship to all teams within AeroBMSCE.",
-      expertise: ["Rocket Propulsion", "Combustion Dynamics", "Fluid Mechanics"],
+      image: "https://placehold.co/200x200?text=Faculty+Advisor",
+      bio: "Our faculty advisor provides guidance and mentorship to all teams within AeroBMSCE, bringing years of experience in aerospace engineering.",
+      expertise: ["Aerospace Engineering", "Research", "Mentorship"],
       social: {
         linkedin: "#",
         twitter: "#"
@@ -37,12 +37,12 @@ const Team = () => {
     },
     {
       id: 2,
-      name: "Priya Mehta",
+      name: "Club President",
       role: "President",
       department: "Leadership",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
-      bio: "Priya leads AeroBMSCE with a passion for innovation and collaboration. She specializes in aerodynamics and has interned at HAL.",
-      expertise: ["Aerodynamics", "Project Management", "Team Leadership"],
+      image: "https://placehold.co/200x200?text=President",
+      bio: "The club president leads AeroBMSCE with a passion for innovation and collaboration, bringing expertise in aerospace technologies.",
+      expertise: ["Leadership", "Project Management", "Aerospace Design"],
       social: {
         linkedin: "#",
         github: "#",
@@ -51,12 +51,12 @@ const Team = () => {
     },
     {
       id: 3,
-      name: "Rohan Patel",
+      name: "Vice President",
       role: "Vice President",
       department: "Leadership",
-      image: "https://randomuser.me/api/portraits/men/22.jpg",
-      bio: "Rohan focuses on strategic partnerships and technical direction for the club. His background in composite materials has been essential for many projects.",
-      expertise: ["Composite Structures", "Strategic Planning", "Industry Relations"],
+      image: "https://placehold.co/200x200?text=Vice+President",
+      bio: "Our vice president focuses on strategic partnerships and technical direction for the club, with expertise in advanced aerospace materials.",
+      expertise: ["Strategic Planning", "Materials Science", "Team Coordination"],
       social: {
         linkedin: "#",
         github: "#"
@@ -64,12 +64,12 @@ const Team = () => {
     },
     {
       id: 4,
-      name: "Neha Gupta",
+      name: "Avionics Lead",
       role: "Avionics Team Lead",
       department: "Technical",
-      image: "https://randomuser.me/api/portraits/women/66.jpg",
-      bio: "Neha has a passion for electronics and flight control systems. She's responsible for the development of custom avionics solutions for AeroBMSCE projects.",
-      expertise: ["Flight Control Systems", "Embedded Programming", "PCB Design"],
+      image: "https://placehold.co/200x200?text=Avionics+Lead",
+      bio: "The avionics lead oversees the development of custom electronics and flight control systems for AeroBMSCE projects.",
+      expertise: ["Flight Controls", "Embedded Systems", "Electronics Design"],
       social: {
         linkedin: "#",
         github: "#"
@@ -77,12 +77,12 @@ const Team = () => {
     },
     {
       id: 5,
-      name: "Vikram Singh",
+      name: "Structures Lead",
       role: "Structures Team Lead",
       department: "Technical",
-      image: "https://randomuser.me/api/portraits/men/55.jpg",
-      bio: "Vikram oversees the design and fabrication of aerospace structures. His focus on lightweight, high-strength designs has been crucial for the success of our flying projects.",
-      expertise: ["Structural Analysis", "CAD/CAM", "Composite Fabrication"],
+      image: "https://placehold.co/200x200?text=Structures+Lead",
+      bio: "Our structures lead oversees the design and fabrication of aerospace structures, focusing on lightweight and high-strength designs.",
+      expertise: ["Structural Analysis", "CAD/CAM", "Composite Materials"],
       social: {
         linkedin: "#",
         github: "#"
@@ -90,12 +90,12 @@ const Team = () => {
     },
     {
       id: 6,
-      name: "Aisha Khan",
+      name: "Propulsion Lead",
       role: "Propulsion Team Lead",
       department: "Technical",
-      image: "https://randomuser.me/api/portraits/women/33.jpg",
-      bio: "Aisha leads the development of propulsion systems for our rockets and UAVs. Her expertise in fluid dynamics and thermodynamics drives innovation in our engine designs.",
-      expertise: ["Rocket Engines", "Fluid Dynamics", "Thermodynamics"],
+      image: "https://placehold.co/200x200?text=Propulsion+Lead",
+      bio: "The propulsion lead develops systems for our rockets and UAVs, applying expertise in fluid dynamics and thermodynamics.",
+      expertise: ["Propulsion Systems", "Fluid Dynamics", "Thermodynamics"],
       social: {
         linkedin: "#",
         github: "#",
@@ -104,12 +104,12 @@ const Team = () => {
     },
     {
       id: 7,
-      name: "Karthik Reddy",
+      name: "Software Lead",
       role: "Software Team Lead",
       department: "Technical",
-      image: "https://randomuser.me/api/portraits/men/11.jpg",
-      bio: "Karthik heads the development of flight software, simulation tools, and data analysis platforms. His expertise in machine learning has helped optimize several systems.",
-      expertise: ["Flight Software", "Simulation", "Machine Learning"],
+      image: "https://placehold.co/200x200?text=Software+Lead",
+      bio: "Our software lead heads the development of flight software, simulation tools, and data analysis platforms for the team.",
+      expertise: ["Flight Software", "Simulation", "Data Analysis"],
       social: {
         linkedin: "#",
         github: "#"
@@ -117,11 +117,11 @@ const Team = () => {
     },
     {
       id: 8,
-      name: "Ananya Desai",
+      name: "Events Coordinator",
       role: "Events Coordinator",
       department: "Operations",
-      image: "https://randomuser.me/api/portraits/women/77.jpg",
-      bio: "Ananya organizes workshops, competitions, and industry visits for AeroBMSCE. Her attention to detail ensures smooth execution of all club events.",
+      image: "https://placehold.co/200x200?text=Events+Coordinator",
+      bio: "The events coordinator organizes workshops, competitions, and industry visits for AeroBMSCE, ensuring smooth execution of all club events.",
       expertise: ["Event Planning", "Public Relations", "Networking"],
       social: {
         linkedin: "#",
@@ -130,11 +130,11 @@ const Team = () => {
     },
     {
       id: 9,
-      name: "Rajiv Kumar",
+      name: "Treasurer",
       role: "Treasurer",
       department: "Operations",
-      image: "https://randomuser.me/api/portraits/men/77.jpg",
-      bio: "Rajiv manages finances, budgeting, and procurement for all AeroBMSCE projects. His background in both engineering and finance provides a valuable perspective.",
+      image: "https://placehold.co/200x200?text=Treasurer",
+      bio: "Our treasurer manages finances, budgeting, and procurement for all AeroBMSCE projects, combining engineering and financial expertise.",
       expertise: ["Budgeting", "Resource Allocation", "Procurement"],
       social: {
         linkedin: "#"

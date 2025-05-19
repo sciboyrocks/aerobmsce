@@ -110,7 +110,7 @@ const About = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-white font-medium text-sm xs:text-base">Est. 2018</p>
+                  <p className="text-white font-medium text-sm xs:text-base">Est. May 5, 2017</p>
                   <p className="text-titanium-gray text-xs xs:text-sm">BMSCE, Bangalore</p>
                 </div>
               </div>
