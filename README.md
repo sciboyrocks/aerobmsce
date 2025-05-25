@@ -1,13 +1,6 @@
-<div align="center">
-  <h1>
-    <img src="./public/aerobmsce.jpg" alt="AEROBMSCE Logo" width="80" height="80" style="border-radius:50%;">
-    AEROBMSCE
-  </h1>
-</div>
+# AEROBMSCE
 
-<div align="center">
-  A modern, interactive website for the Aerospace Engineering Department/Club at BMS College of Engineering.
-</div>
+A modern, interactive website for the Aerospace Engineering Club at BMS College of Engineering.
 
 ## 🚀 About
 
@@ -16,11 +9,9 @@ AEROBMSCE is a React-based web application designed to showcase aerospace engine
 ## ✨ Features
 
 - **Interactive UI**: Smooth animations powered by Framer Motion
-- **3D Elements**: Three.js integration for immersive aerospace-themed 3D components
 - **Day/Night Mode**: Toggle between light and dark themes
 - **Responsive Design**: Fully optimized for all device sizes
 - **Modern Stack**: Built with React 19, TypeScript, and Vite
-- **Animation Effects**: GSAP animations for enhanced user experience
 - **Interactive Starfield**: Dynamic canvas-based star animations
 - **Team Showcase**: Animated cards displaying team members
 
@@ -30,5 +21,11 @@ AEROBMSCE is a React-based web application designed to showcase aerospace engine
 - **Language**: TypeScript
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS
+
+## Author
+- **Made By**: Samrudh Raikote
+- **Department**: AIML
+- **USN**: 1BF24AI148
+- **[Check out my other works](https://www.samrudhraikote.me/)**
 
   
