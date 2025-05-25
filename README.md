@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# AEROBMSCE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![AEROBMSCE Logo](./public/aerobmsce.jpg)
 
-Currently, two official plugins are available:
+A modern, interactive website for the Aerospace Engineering Department/Club at BMS College of Engineering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About
 
-## Expanding the ESLint configuration
+AEROBMSCE is a React-based web application designed to showcase aerospace engineering activities, projects, events, and team information. The application features a sleek, responsive design with both day and night modes, interactive animations, and engaging content layouts.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Interactive UI**: Smooth animations powered by Framer Motion
+- **3D Elements**: Three.js integration for immersive aerospace-themed 3D components
+- **Day/Night Mode**: Toggle between light and dark themes
+- **Responsive Design**: Fully optimized for all device sizes
+- **Modern Stack**: Built with React 19, TypeScript, and Vite
+- **Animation Effects**: GSAP animations for enhanced user experience
+- **Interactive Starfield**: Dynamic canvas-based star animations
+- **Team Showcase**: Animated cards displaying team members
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Frontend Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  
