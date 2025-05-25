@@ -1,8 +1,13 @@
-# AEROBMSCE
+<div align="center">
+  <h1>
+    <img src="./public/aerobmsce.jpg" alt="AEROBMSCE Logo" width="80" height="80" style="border-radius:50%;">
+    AEROBMSCE
+  </h1>
+</div>
 
-![AEROBMSCE Logo](./public/aerobmsce.jpg)
-
-A modern, interactive website for the Aerospace Engineering Department/Club at BMS College of Engineering.
+<div align="center">
+  A modern, interactive website for the Aerospace Engineering Department/Club at BMS College of Engineering.
+</div>
 
 ## 🚀 About
 
